@@ -42,7 +42,29 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
+/*function PasswordValidationResult(password) {
+    var validPass = [];
+    password.forEach(function (element) {
+
+        validPass.push((element.length >= 5 && element.match(/[A-Z]+/) && element.match(/[0-9]+/) && element.match(/[a-z]+/) && element.match(/[$@#&!%.]+/)) ? true : false);
+
+    });
+    return validPass;
+}*/
+
+function PasswordValidation(pass) 
+{ 
+
+if (pass.length >= 5 && pass.match(/[A-Z]+/) && pass.match(/[0-9]+/) && pass.match(/[a-z]+/) && pass.match(/[!#$%.]+/)){
+    return true;
+}
+else {
+return false;
+}
+
+}
 
 var password = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
+var PasswordValidationResult = password.map(PasswordValidation);
 
 console.log(PasswordValidationResult)

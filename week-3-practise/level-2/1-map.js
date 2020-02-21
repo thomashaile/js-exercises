@@ -12,8 +12,11 @@ var londonLocations = [
   ["Greenwich", "tube", "bus", "river boat"]
 ];
 
-var locationsByBoat;
-
+let locationsByBoat = londonLocations.map(function(num) {
+  if(num.includes('river boat') && num.length > 0){
+    return num[0];
+  }
+});
 console.log(locationsByBoat);
 
 /* EXPECTED OUTPUT
