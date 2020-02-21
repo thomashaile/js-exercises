@@ -25,7 +25,8 @@ var voyagers = [
   "Archer family"
 ];
 
-var colonisers; // Complete this statement
+//var colonisers; // Complete this statement
+var colonisers = voyagers.filter(word => word.includes("family") && word.startsWith("A")); 
 
 console.log(colonisers);
 
